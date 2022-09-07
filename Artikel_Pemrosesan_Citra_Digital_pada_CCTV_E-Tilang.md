@@ -10,7 +10,7 @@
 
 <br>
 
-<img src="ALGORITMA.png" style="width:50%"/><br><br>
+<img src="/img/ALGORITMA.png" style="width:50%"/><br><br>
 
 <br>
 
@@ -45,40 +45,40 @@ Algoritma _*Frame Difference*_ dan _*Frame Substraction*_ dapat dilihat pada gam
 
 <br>
 
-<img src="Gambar1.png" style="width:50%"/><br><br>
+<img src="/img/Gambar1.png" style="width:50%"/><br><br>
 
 Untuk melakukan proses ekstraksi _*file video*_ menjadi _*frame*_, maka pemakai dapat mengklik tombol Buka Video, sehingga sistem akan menampilkan _*form Video*_ seperti terlihat pada gambar berikut:
 
 <br>
 
-<img src="Gambar2.png" style="width:50%"/><br><br>
+<img src="/img/Gambar2.png" style="width:50%"/><br><br>
 
 User dapat memilih _*file*_ video yang akan diproses dengan mengklik tombol Buka Video, sehingga sistem akan menampilkan _*form Browse*_ seperti terlihat pada gambar berikut:
 
-<img src="Gambar3.png" style="width:50%"/><br><br>
+<img src="/img/Gambar3.png" style="width:50%"/><br><br>
 
 Setelah selesai melakukan proses pemilihan _*file*_ yang diinginkan, maka user dapat mengklik tombol Open, sehingga sistem akan menampilkan _*form*_ Ekstrak File Video seperti 
 terlihat pada gambar berikut:
 
-<img src="Gambar4.png" style="width:50%"/><br><br>
+<img src="/img/Gambar4.png" style="width:50%"/><br><br>
 
 Setelah berhasil mengekstrak video, maka _*user*_ dapat memulai proses pendeteksian pergerakan seperti terlihat pada gambar berikut:
 
-<img src="Gambar5.png" style="width:50%"/><br><br>
+<img src="/img/Gambar5.png" style="width:50%"/><br><br>
 
 Hasil difference dan substraction dari kedua frame diatas dapat dirincikan sebagai berikut:
 
-<img src="Gambar6.png" style="width:50%"/><br><br>
+<img src="/img/Gambar6.png" style="width:50%"/><br><br>
 
 Hasil proses pendeteksian pergerakan yang diperoleh dapat dilihat pada gambar berikut:
 
-<img src="Gambar7.png" style="width:50%"/><br><br>
+<img src="/img/Gambar7.png" style="width:50%"/><br><br>
 
 Pada beberapa tes uji, proses pendeteksian gerak dilakukan terhadap 25 data untuk diuji, data tersebut memiliki background dan kondisi cahaya yang berbeda. Hasil Proses pendeteksian pergerakan dengan _*frame differance*_ dan _*frame substraction*_ dapat dilihat pada tabel berikut:
 
-<img src="Gambar8.png" style="width:50%"/><br><br>
+<img src="/img/Gambar8.png" style="width:50%"/><br><br>
 
-<img src="Gambar9.png" style="width:50%"/><br><br>
+<img src="/img/Gambar9.png" style="width:50%"/><br><br>
 
 Berdasarkan hasil pengujian dari 25 data diuji pada video diatas, maka dapat diperoleh bahwa pengaruh warna background, warna objek dan kondisi cahaya akan menentukan berhasil atau tidaknya pendeteksian gerak pada video. 
 
