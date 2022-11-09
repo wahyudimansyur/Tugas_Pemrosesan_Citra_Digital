@@ -64,7 +64,7 @@ end
 ```
 
 <p align="justify">Output yang diperoleh berdasarkan code diatas adalah:</p>
-<p align="center"><img src="img/bitplaneimg.PNG"></p>
+<p align="center"><img src="img/bitplaneimggabungan.PNG"></p>
 
 ## 3. Steganografi
 <p align="justify"><b>Steganografi</b> adalah seni dan ilmu menulis pesan tersembunyi atau menyembunyikan pesan dengan suatu cara sehingga selain si pengirim dan si penerima, tidak ada seorang pun yang mengetahui atau menyadari bahwa ada suatu pesan rahasia.<br>
