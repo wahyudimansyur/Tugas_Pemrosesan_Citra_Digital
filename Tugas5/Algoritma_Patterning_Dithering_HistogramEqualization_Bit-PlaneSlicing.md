@@ -125,8 +125,3 @@ for i = 1:8
   subplot(3, 3, i+1) ; imshow(bit_img); title(["Bit Plane ", num2str(i)]);
 end
 ```
-
-### Algoritma / Langkah-Langkah
-### 1. Inputan Citra Binner / Matriks
-### 2. Mengubah Angka Desimal menjadi Biner
-### 3. Diubah ke bentuk matriks-matriks kecil
