@@ -34,6 +34,38 @@
 <li>Menentukan range persebaran nilai untuk tiap pola guna membagi tingkat keabuannya. Cara menghitungnya 255 dibagi dengan jumlah pola.</li>
 <li>Cocokkan setiap nilai pada matriks inputan / matriks citra dengan nilai dari tiap range pola.</li>
 
+<h4>Code Patterning:</h4>
+
+``` Octave
+% membaca citra awal
+img = imread("lenna.png");
+
+% mendapatkan tinggi dan lebar suatu citra / ukuran
+[img_height, img_width] = size(img);
+
+% kuantisasi citra dari 0 - 255 ke 0 - 9
+quantized_img = round(9/255 * img);
+
+% buat sebuah wadah baru untuk citra patterning
+pattern_img = zeros(3 * img_width);
+
+% looping citra terkuantisasi
+for x = 1:img_height
+	for y = 1:img_width
+		index = quantized_img(x, y) + 1;
+		pattern = get_pattern(index);
+
+		m = 1 + 3*(x - 1);
+		n = 1 + 3*(y - 1);
+
+		pattern_img(m:m + 2, n:n + 2)	= pattern;
+	end
+end
+
+% menyimpan citra hasil patterning
+imwrite(pattern_img, "hasil.png");
+```
+
 ## 2. Algoritma Dithering
 
 <p>Dithering membuat gambar keluaran dengan jumlah titik yang sama dengan jumlah pixel pada gambar aslinya. Dithering dilakukan  dengan  membandingkan  tiap  blok  dari  citra  asli dengan sebuah matriks  pembatas  yang  disebut  dengan <i>treshold</i>.</p>
@@ -43,6 +75,49 @@
 <li>Setelah matriks treshold didapatkan, untuk setiap nilai pada matriks citra dibandingkan dengan nilai matriks treshold.</li>
 <li>Jika setelah dibandingkan didapati nilai matriks lebih besar dari treshold, maka matriks akan bernilai 1 / 255 dan berwarna putih.</li>
 <li>Jika setelah dibandingkan didapati nilai matriks lebih kecil dari treshold, maka matriks akan bernilai 0 dan berwarna hitam.</li>
+
+<h4>Code Dithering:</h4>
+
+``` Octave
+% membaca citra grayscale
+img = imread("baboon.jpg");
+
+% mendapatkan tinggi dan lebar citra / ukuran
+[img_height, img_width] = size(img);
+
+
+d1 = [
+	0 128;
+	192 64
+];
+
+d2 = [
+	0 128 32 160;
+	192 64 224 96;
+	48 176 16 144;
+	240 112 208 80
+];
+
+% Membuat matriks threshold yang ukurannya sama dengan matriks citra
+threshold_img_d1 = repmat(d1, round(img_width/2), round(img_height/2));
+threshold_img_d2 = repmat(d2, round(img_width/4), round(img_height/4));
+
+% Melakukan dithering citra dengan membandingkan matriks citra dengan matriks threshold
+dith_img_d1 = img > threshold_img_d1;
+dith_img_d2 = img > threshold_img_d2;
+
+% Plotting
+subplot(1,3,1); imshow(img); title("Citra Original");
+
+subplot(1,3,2); imshow(dith_img_d1); title("Hasil Dithering dengan D1");
+
+subplot(1,3,3); imshow(dith_img_d2); title("Hasil Dithering dengan D2");
+
+% menyimpan citra hasil dithering
+imwrite(img, "original.jpg");
+imwrite(dith_img_d1, "dith1.jpg");
+imwrite(dith_img_d2, "dith2.jpg");
+```
 
 ## 3. Algoritma Histogram Equalization
 
