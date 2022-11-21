@@ -1,6 +1,6 @@
 pkg load image
 
-img = imread('img\img1.jpg');
+img = imread('littlePony.jpg');
 cover_img = rgb2gray(img);
 [img_height, img_width] = size(cover_img);
 
@@ -40,7 +40,7 @@ for x = 1:img_height
 end
 
 % simpan gambar
-imwrite(stego_img, "stego.png")
+imwrite(stego_img, "stegoLittlePony.png")
 
 lsb_before = bitget(cover_img, 1);
 lsb_after = bitget(stego_img, 1);
